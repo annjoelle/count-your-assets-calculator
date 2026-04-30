@@ -42,7 +42,7 @@ function displayItems () {
                             <i class="ph ph-minus"></i>
                         </div>
                         <div class="quantity">
-                            <input type="number" name="count" class="count" min="0" max="15" placeholder="0" value="0" id="${card["img"].slice(0, card["img"].length - 4)}-input"/>
+                            <input type="number" name="count" class="count" min="0" max="15" placeholder="0" value="0" disabled id="${card["img"].slice(0, card["img"].length - 4)}-input"/>
                         </div>
                         <div class="icon plus ${card["img"].slice(0, card["img"].length - 4)}">
                             <i class="ph ph-plus"></i>
