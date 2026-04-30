@@ -116,15 +116,13 @@ main {
     align-items: center;
 }
 
-input {
+input:disabled {
+    color: #000;
+    background-color: transparent;
     font-size: 20px;
     font-weight: 700;
     text-align: center;
     border: 0px;
-}
-
-.icon:active {
-    
 }
 
 .line {
