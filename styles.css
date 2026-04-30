@@ -1,102 +1,150 @@
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Gasoek+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
-:root {
-    --color-purple-primary: #FCDCFF;
-    --color-white-primary: #FFFEDC;
-    --color-text-primary: #000;
-    --color-shadow-primary: #000;
-    --color-button-primary: #A8FF57;
-    --font-body-main: "Atkinson Hyperlegible", sans-serif;
+.kode-mono-font {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400, 500, 600, 700;
+  font-style: normal;
 }
 
 * {
+    margin: 0;
+    font-family: "Kode Mono", monospace;
     box-sizing: border-box;
-    font-family: var(--font-body-main);
-}
-
-html, body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
 }
 
 body {
-    background-color: var(--color-purple-primary);
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
 }
 
-body {
-    margin: auto;
-}
-
-main {
-    background-color: var(--color-white-primary);
-    width: 600px;
-    max-width: 90vw;
-    box-sizing: border-box;
-    margin: auto;
-    padding: 30px;
-    justify-content: center;
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    border-radius: 29px;
-    border: 2px solid var(--color-shadow-primary);
-    background: #FFFEDC;
-    box-shadow: 3px -5px 0 0 rgba(0, 0, 0, 0.15) inset, 0 5px 0 0 var(--color-shadow-primary);
+    background-color: black;
+    color: white;
+    padding: 16px;
+    width: 100%;
+    max-width: inherit;
+}
+
+#subtitle {
+    font-size: 20px;
 }
 
 h1 {
-    text-align: center;
+    font-size: 36px;
 }
 
-table {
-    margin: 20px 0;
+#reset-button {
+    border-radius: 8px;
+    padding: 2px 2px 2px 6px;
+}
+
+svg {
+    transition: 1000ms;
+}
+
+svg:active {
+    transform: rotate(-60deg);
+    transition: 500ms;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 16px 64px 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    gap: 16px;
+}
+
+.item-info-wrapper {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
     width: 100%;
-    border-spacing: 0cap;
+    gap: 16px;
+}
+
+.item-info-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-info-wrapper:first-child {
+    min-width: 147px;
+    width: inherit;
+}
+
+.card-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card-value {
+    background-color: #ECFF8F;
+    border: solid 1px black;
+    border-radius: 7px;
+    width: fit-content;
+    padding: 3px 10px;
+}
+
+.subtotal-wrapper {
     font-size: 14px;
-}
-
-table th {
-    font-weight: bold;
-}
-
-table:first-of-type {
-    text-align: justify;
-}
-
-thead th {   
-    border-top: 1px #000 solid;
-    border-bottom: #000 1px solid;
-}
-
-th, td {
-    padding: 8px;
-    align-content: end;
     text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
 }
 
-tr :nth-child(2)::before, tr :nth-child(4)::before {
-    content: "$";
-}
-
-tbody :nth-child(odd) td {
-    background-color:#FFFEDC
-}
-
-tfoot {
-    font-weight: bold;
-    background-color: #A8FF57;
-    border: #000 solid 1px;
+.counter-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 input {
-    text-align: right;
-    background-color: #FCDCFF;
-    border: #000 1px solid;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border: 0px;
+}
+
+.icon:active {
+    
+}
+
+.line {
+    border: solid 1px black;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    width: 100%;
+    max-width: inherit;
+    background-color: #DE82FF;
+    border: solid 2px black;
+    font-size: 24px;
+    margin-left: -1px;
+}
+
+#total {
+    font-weight: 700;
 }
